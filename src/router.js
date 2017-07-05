@@ -15,10 +15,11 @@ class BasicExample extends React.Component {
         return (
             <Router>
                 <div>
-                    <App/>
-                    <Route exact path="/" component={HomePage}/>
-                    <Route path="/notes" component={NotePage}/>
-                    <Route path="/statistic" component={StatisticPage}/>
+                    <App>
+                        <Route exact path="/" component={HomePage}/>
+                        <Route path="/notes" component={NotePage}/>
+                        <Route path="/statistic" component={StatisticPage}/>
+                    </App>
                 </div>
             </Router>
         );
