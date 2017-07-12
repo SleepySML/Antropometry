@@ -1,26 +1,26 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {ResponsiveNavigation} from 'react-foundation';
+import {NavLink} from 'react-router-dom';
 
 class Navigation extends React.Component {
     render() {
         return (
-                <ResponsiveNavigation breakpoint="720">
-                        <div className="top-bar-left">
-                            <ul className="menu">
-                                <li><Link to="/">Logo</Link></li>
-                                <li><Link to="/">Home</Link></li>
-                                <li><Link to="/notes">Notes</Link></li>
-                                <li><Link to="/statistic">Statistic</Link></li>
+
+                <nav className="row">
+                        <div className="column large-5 navigation">
+                            <ul className="menu nav-links">
+                                <li className="nav-link"><NavLink to="/" exact activeClassName="active" className="menu-link" ><image id="logo-image"></image></NavLink></li>
+                                <li className="nav-link"><NavLink to="/" className="menu-link" exact activeClassName="active">Home</NavLink></li>
+                                <li className="nav-link"><NavLink to="/notes" className="menu-link" activeClassName="active">Notes</NavLink></li>
+                                <li className="nav-link"><NavLink to="/statistic" className="menu-link" activeClassName="active">Statistic</NavLink></li>
                             </ul>
                         </div>
-                        <div className="top-bar-right">
-                            <ul className="menu">
-                                <li><button className="button">Log in</button></li>
-                                <li><button className="button">Sign up</button></li>
+                        <div className="column">
+                            <ul className="menu align-right">
+                                <li className="nav-link"><button id="login-btn" className="button">Log in</button></li>
+                                <li className="nav-link"><button id="signUp-btn" className="button">Sign up</button></li>
                             </ul>
                         </div>
-                </ResponsiveNavigation>
+                </nav>
         );
     }
 }

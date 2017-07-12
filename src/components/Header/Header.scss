@@ -1,0 +1,90 @@
+$line-height: 60px;
+$nav-padding: 10px;
+$nav-margin: 10px;
+header
+{
+
+  background-color: #2E353D;
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  width: 100%;
+
+    nav{
+        box-sizing: border-box;
+        height: $line-height;
+        padding-top: $nav-padding;
+        padding-bottom: $nav-padding;
+
+
+        >ul.nav-links{
+            padding: 0;
+            margin: 0;
+            vertical-align: top;
+            height: 100%;
+
+            >li.nav-link{
+                margin-right: 10px;
+                height: 100%;
+                vertical-align: middle;
+                padding: $nav-padding;
+                line-height: $line-height - $nav-padding;
+            }
+        }
+
+        a.menu-link{
+            margin-right: $nav-padding;
+            color: #99abb6;
+            text-align: center;
+            height: 100%;
+
+            &:hover{
+                border-radius: 4px;
+                color: #FFFFFF;
+                background: rgba(0,0,0,0.1);
+                box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
+
+            }
+        }
+        .active{
+            border-radius: 4px;
+            color: #FFFFFF;
+            background: rgba(0,0,0,0.2);
+            box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
+        }
+
+    }
+    .column{
+        padding: 0;
+    }
+
+    .button{
+        background-color: #2E353D;
+        color: #99abb6;
+        margin-left: $nav-margin;
+        padding: 0;
+
+        &:hover{
+          border-radius: 4px;
+          color: #FFFFFF;
+          background: rgba(0,0,0,0.1);
+          box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
+
+        }
+    }
+  #signUp-btn{
+    color: white;
+    background-color: #f25423;
+  }
+  #login-btn{
+
+  }
+
+  #logo-image{
+    background-image: url(../Footer/AntLogo.png);
+  }
+}
+
+.navigation{
+    padding: 0;
+}

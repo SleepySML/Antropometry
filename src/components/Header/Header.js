@@ -1,13 +1,13 @@
 import React from 'react';
 import Navigation from './Navigation';
-import './Header.css';
+import './Header.scss';
 
 
 class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                <header className="row">
+                <header>
                         <Navigation/>
                 </header>
             </div>
