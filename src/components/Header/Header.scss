@@ -29,8 +29,14 @@ header
                 vertical-align: middle;
                 padding: $nav-padding;
                 line-height: $line-height - $nav-padding;
+
+
+              }
             }
         }
+
+
+
 
         a.menu-link{
             margin-right: $nav-padding;
@@ -53,6 +59,18 @@ header
             box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
         }
 
+  a.header-logo-link {
+    margin-right: 4*$nav-margin;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+
+    >img {
+      height: 100%;
+      width: 100%;
+      vertical-align: top;
+    }
+
     }
     .column{
         padding: 0;
@@ -72,6 +90,8 @@ header
 
         }
     }
+
+
   #signUp-btn{
     color: white;
     background-color: #f25423;
