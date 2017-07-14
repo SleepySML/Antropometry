@@ -1,0 +1,45 @@
+.slider-wrapper{
+  box-sizing: border-box;
+  max-height: 400px;
+  position: relative;
+  overflow: hidden;
+
+  width: 700px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+
+  border-radius: 10px;
+  height: 400px;
+
+
+
+
+  ul{
+    height: 100%;
+    width: 300%;
+    margin: 0;
+    padding: 0;
+    border: 10px black;
+    border-radius: 10px;
+    display: flex;
+
+
+
+    li{
+      height: 100%;
+      width:100%;
+      display: inline-block;
+
+
+      img{
+
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+
+}

@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 //import LoginForm from '../Header/LoginForm';
-import SignUpFormm from  '../Header/SignUpForm';
+//import SignUpFormm from  '../Header/SignUpForm';
 import './HomePage.scss';
+import {} from 'react-foundation';
+import Slider from '../Slider/Slider';
 
 class HomePage extends Component {
     render() {
         return (
             <div className="row homePage">
-                <div className="row large-12 column">
-                    <h1>This is HomePage</h1>
-                </div>
-
-                <SignUpFormm/>
+                <Slider/>
             </div>
         );
     }

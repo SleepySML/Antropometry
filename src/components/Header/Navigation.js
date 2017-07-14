@@ -2,12 +2,12 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Logo from '../../static/images/AntLogoHeader.png';
 
+
 class Navigation extends React.Component {
     render() {
         return (
-
                 <nav className="row">
-                        <div className="column large-5 navigation">
+                        <div className="column navigation">
                             <ul className="menu nav-links">
                                 <li className="nav-link">
                                     <NavLink className="header-logo-link" activeClassName="activelogo" exact to="/">
@@ -21,7 +21,7 @@ class Navigation extends React.Component {
                         </div>
                         <div className="column">
                             <ul className="menu align-right">
-                                <li className="nav-link"><button id="login-btn" className="button">Log in</button></li>
+                                <li className="nav-link"><button id="login-btn" className="button" >Log in</button></li>
                                 <li className="nav-link"><button id="signUp-btn" className="button">Sign up</button></li>
                             </ul>
                         </div>
