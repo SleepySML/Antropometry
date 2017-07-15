@@ -5,7 +5,7 @@ import img2 from '../../static/images/sliderImages/slide2.png';
 import img3 from '../../static/images/sliderImages/slide3.png';
 
 const style = {
-    transition: 'all .2s ease-in'
+    transition: 'all .2s ease-out'
 };
 
 class Slider extends React.Component{
@@ -16,6 +16,25 @@ class Slider extends React.Component{
         };
         this.onNextSlide = this.onNextSlide.bind(this);
         this.onPrevSlide = this.onPrevSlide.bind(this);
+    }
+
+    timer() {
+
+        if (this.state.marginLeft <= -200){
+            this.setState({marginLeft: 0});
+        }
+        else {
+            this.setState({marginLeft: this.state.marginLeft - 100});
+            console.log(this.state.marginLeft);
+        }
+    }
+
+    componentWillUnmount(){
+        clearTimeout(this.timerId);
+    }
+
+    componentDidMount() {
+        this.timerId = setInterval(this.timer.bind(this), 5000);
     }
 
     onNextSlide(){
@@ -43,6 +62,17 @@ class Slider extends React.Component{
 
     render(){
 
+        /*this.timerId = setInterval(()=>{
+            if (this.state.marginLeft <= -200){
+                this.setState({marginLeft: 0});
+                console.log(this.state.marginLeft);
+            }
+            else {
+                this.setState({marginLeft: this.state.marginLeft - 100});
+                console.log(this.state.marginLeft);
+            }
+        },5000);*/
+
         return(
             <div className="slider-wrapper">
                 <ul className="Slider-list" style={{...style, marginLeft: this.state.marginLeft+"%"}}>
@@ -54,7 +84,7 @@ class Slider extends React.Component{
                     <button className="orbit-next" onClick={this.onNextSlide}><span className="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
                     <button className="orbit-previous" onClick={this.onPrevSlide}><span className="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
                 </div>
-            </div>
+        </div>
         );
     }
 }

@@ -17,7 +17,7 @@ const publicPath = '/';
 const publicUrl = '';
 const env = getClientEnvironment(publicUrl);
 module.exports = {
-  devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
   entry: [
     require.resolve('react-dev-utils/webpackHotDevClient'),
     require.resolve('./polyfills'),
