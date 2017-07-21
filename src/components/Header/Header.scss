@@ -1,110 +1,171 @@
 $line-height: 60px;
 $nav-padding: 10px;
 $nav-margin: 10px;
+
+$header-backgrond-color: #2E353D;
+$header-text-color: #99abb6;
+
+$active-background: rgba(0,0,0,0.2);
+$active-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
+
+$hover-background: rgba(0,0,0,0.1);
+$hover-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
+
 header
 {
 
-  background-color: #2E353D;
-  position: fixed;
-  z-index: 1000;
-  top: 0px;
+  background-color: $header-backgrond-color;
   width: 100%;
-
-    nav{
-        box-sizing: border-box;
-        height: $line-height;
-        padding-top: $nav-padding;
-        padding-bottom: $nav-padding;
+  top:0;
+  z-index: 1000;
+  position: fixed;
+  min-height: 58px;
 
 
-        >ul.nav-links{
-            padding: 0;
+  .navigation-wrapper{
+    padding: 0;
+  }
+
+  nav
+  {
+    box-sizing: border-box;
+    width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: $nav-padding;
+    padding-bottom: $nav-padding;
+
+    .navigation-wrapper{
+      position: relative;
+    }
+
+    .menu-icon{
+      padding: 0;
+      margin-left: $nav-margin;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu{
+      font-size: 0;
+      display: block;
+
+      .nav-button{
+        margin: 0;
+        margin-left: $nav-margin;
+        float: right;
+        color: white;
+      }
+
+        li{
+          font-size: 16px;
+          float: left;
+          display: block;
+          vertical-align: middle;
+
+
+
+          button{
             margin: 0;
-            vertical-align: top;
-            height: 100%;
+            border: 0;
+            text-align: center;
+            background-color: $header-backgrond-color;
+            color: #99abb6;
 
-            >li.nav-link{
-                margin-right: 10px;
-                height: 100%;
-                vertical-align: middle;
-                padding: $nav-padding;
-                line-height: $line-height - $nav-padding;
-
-
-              }
+            &:hover{
+              border-radius: 4px;
+              color: #FFFFFF;
+              background: rgba(0,0,0,0.1);
+              box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
             }
-        }
+          }
 
+          .header-logo-link{
+            padding: 0;
+            margin: auto;
+          }
 
+          a{
+            height: 50%;
+            text-align: center;
+          }
 
-
-        a.menu-link{
+          .menu-link {
             margin-right: $nav-padding;
             color: #99abb6;
             text-align: center;
             height: 100%;
 
             &:hover{
-                border-radius: 4px;
-                color: #FFFFFF;
-                background: rgba(0,0,0,0.1);
-                box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
+              border-radius: 4px;
+              color: #FFFFFF;
+              background: rgba(0,0,0,0.1);
+              box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
 
             }
-        }
-        .active{
+          }
+          .active{
             border-radius: 4px;
             color: #FFFFFF;
             background: rgba(0,0,0,0.2);
             box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
-        }
-
-  a.header-logo-link {
-    margin-right: 4*$nav-margin;
-    height: 40px;
-    width: 40px;
-    padding: 0;
-
-    >img {
-      height: 100%;
-      width: 100%;
-      vertical-align: top;
-    }
-
-    }
-    .column{
-        padding: 0;
-    }
-
-    .button{
-        background-color: #2E353D;
-        color: #99abb6;
-        margin-left: $nav-margin;
-        padding: 0;
-
-        &:hover{
-          border-radius: 4px;
-          color: #FFFFFF;
-          background: rgba(0,0,0,0.1);
-          box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2);
+          }
 
         }
     }
 
+    @media screen and (max-width: 560px)
+    {
+      .navigation-wrapper{
+        margin-top: 13px;
+      }
+      .header-logo-link{
+        display: none;
+      }
+      .menu
+      {
+        //display: block;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 560px;
+        display: none;
+        position: absolute;
+        background-color: $header-backgrond-color;
 
-  #signUp-btn{
-    color: white;
-    background-color: #f25423;
-  }
-  #login-btn{
+        li{
+          float: none;
+          width: 100%;
+          text-align: -webkit-center;
 
-  }
+          button{
+            width: 100%;
+          }
+        }
 
-  #logo-image{
-    background-image: url(../Footer/AntLogo.png);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .envelope {
+      display: none;
+      width: 22rem;
+      z-index:1002;
+      position: relative;
+      margin: 10% auto;
+      margin-bottom: 100%;
+    }
   }
 }
 
-.navigation{
-    padding: 0;
+
+#signUp-btn {
+ background-color: #ff6837;
+  color: #FFFFFF;
+}
+#login-btn {
 }

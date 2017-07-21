@@ -2,6 +2,15 @@ import React from 'react';
 import './loginForm.scss';
 
 class LoginForm extends React.Component{
+    constructor(){
+        super();
+        this.onLogin= this.onLogin.bind(this);
+    }
+
+    onLogin(){
+        document.querySelector('.black-overlay').style.display = "none";
+        document.querySelector('.envelope').style.display = "none";
+    }
     render () {
         return (
             <div className="loginform">
@@ -46,7 +55,7 @@ class LoginForm extends React.Component{
                         </div>
                     </div>
                     <div>
-                        <button className="loginBtn button  success">Log In</button>
+                        <button className="loginBtn button  success" onClick={this.onLogin}>Log In</button>
                     </div>
 
                 </form>

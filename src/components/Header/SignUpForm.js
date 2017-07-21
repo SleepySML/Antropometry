@@ -49,7 +49,8 @@ class SignUpForm extends React.Component {
                         </div>
                     </div>
                     <div>
-                        <button className="loginBtn button  success">Sign Up</button>
+                        <button className="loginBtn button  success" onClick={()=>{document.querySelector('.black-overlay').style.display = "none";
+                            document.querySelector('.envelope').style.display = "none";}}>Sign Up</button>
                     </div>
 
                 </form>

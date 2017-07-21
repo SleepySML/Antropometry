@@ -5,7 +5,7 @@ import img2 from '../../static/images/sliderImages/slide2.png';
 import img3 from '../../static/images/sliderImages/slide3.png';
 
 const style = {
-    transition: 'all .2s ease-out'
+    transition: 'all .3s ease-out'
 };
 
 class Slider extends React.Component{
@@ -16,17 +16,11 @@ class Slider extends React.Component{
         };
         this.onNextSlide = this.onNextSlide.bind(this);
         this.onPrevSlide = this.onPrevSlide.bind(this);
+        this.timer = this.timer.bind(this);
     }
 
     timer() {
-
-        if (this.state.marginLeft <= -200){
-            this.setState({marginLeft: 0});
-        }
-        else {
-            this.setState({marginLeft: this.state.marginLeft - 100});
-            console.log(this.state.marginLeft);
-        }
+        this.onNextSlide();
     }
 
     componentWillUnmount(){
@@ -34,44 +28,28 @@ class Slider extends React.Component{
     }
 
     componentDidMount() {
-        this.timerId = setInterval(this.timer.bind(this), 5000);
+        this.timerId = setInterval(this.onNextSlide, 10000);
     }
 
     onNextSlide(){
-
         if (this.state.marginLeft <= -200){
             this.setState({marginLeft: 0});
         }
         else {
             this.setState({marginLeft: this.state.marginLeft - 100});
         }
-
-
     }
 
     onPrevSlide(){
-
         if (this.state.marginLeft >= 0 ){
             this.setState({marginLeft: -200});
         }
         else {
             this.setState({marginLeft: this.state.marginLeft + 100});
         }
-
     }
 
     render(){
-
-        /*this.timerId = setInterval(()=>{
-            if (this.state.marginLeft <= -200){
-                this.setState({marginLeft: 0});
-                console.log(this.state.marginLeft);
-            }
-            else {
-                this.setState({marginLeft: this.state.marginLeft - 100});
-                console.log(this.state.marginLeft);
-            }
-        },5000);*/
 
         return(
             <div className="slider-wrapper">
