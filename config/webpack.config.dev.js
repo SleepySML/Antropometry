@@ -95,6 +95,10 @@ module.exports = {
         },
       },
       {
+          test: /\.svg$/,
+          loader: 'react-svg-loader?es5=1'
+      },
+      {
         test: /\.(scss|css)$/,
         use: [
           require.resolve('style-loader'),

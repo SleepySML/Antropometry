@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 //import LoginForm from '../Header/LoginForm';
 //import SignUpFormm from  '../Header/SignUpForm';
 import PerfomanceImage from "../../static/images/HomePage/startup.svg";
-import Adaptive from "../../static/images/HomePage/adaptive.svg";
-import Modern from "../../static/images/HomePage/css-3.svg";
+//import Adaptive from "../../static/images/HomePage/adaptive.svg";
+//import Modern from "../../static/images/HomePage/css-3.svg";
 import './HomePage.scss';
 import {} from 'react-foundation';
 import Slider from '../Slider/Slider';
@@ -25,7 +25,7 @@ class HomePage extends Component {
                 <div className="row description-blocks">
                     <div className="column large-4">
                         <div>
-                            <img src={PerfomanceImage} alt="image1"/>
+                            <img /*src={PerfomanceImage}*/ alt="image1"/>
                         </div>
                         <span>Высокая производительность.
                             блаблаблаблаблаблабла
@@ -33,7 +33,7 @@ class HomePage extends Component {
                     </div>
                     <div className="column large-4">
                         <div>
-                            <img src={Modern} alt="image1"/>
+                            <img /*src={Modern}*/ alt="image1"/>
                         </div>
                         <span>Создан на современных технологиях.
                             блаблабла блаблабла
@@ -42,7 +42,7 @@ class HomePage extends Component {
                     </div>
                     <div className="column large-4 ">
                         <div>
-                            <img src={Adaptive} alt="image1"/>
+                            <img /*src={Adaptive}*/ alt="image1"/>
                         </div>
                         <span>Быстрая тех-поддержка. блаблабла блаблабла
                             блаблабла блаблабла блаблабла
