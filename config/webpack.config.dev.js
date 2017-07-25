@@ -80,13 +80,20 @@ module.exports = {
         },
       },
       {
-        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/],
         loader: require.resolve('url-loader'),
         options: {
           limit: 10000,
           name: 'static/media/[name].[hash:8].[ext]',
         },
       },
+        {
+            test: /\.png$/i,
+            use: [
+                'url-loader?limit=10000',
+                'img-loader'
+            ]
+        },
       {
         test: /\.(js|jsx)$/,
         include: paths.appSrc,
