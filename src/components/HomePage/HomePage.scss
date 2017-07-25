@@ -30,45 +30,22 @@ html, body{
   .title{
     color: black;
     font-size: 1.5rem;
-    padding: 0;
+    padding: 25px 0 15px 0;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
     text-align: center;
+    span{
+      margin: auto;
+    }
   }
 
-  .description-blocks{
+  .descriptions-block{
     text-align: center;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
-
-    .column{
-      margin: 10px 0;
-
-
-      .title-description{
-        text-align: center;
-        margin: 0 0;
-        font-size: 1.5rem;
-        font-family: 'Bellefair', sans-serif;
-        span{
-          margin: 0 auto;
-        }
-      }
-
-      .description{
-        margin: 0;
-      }
-      svg {
-        max-height: 100px;
-
-        :hover{
-          fill: red;
-        }
-      }
-
-    }
+    margin-bottom: 20px;
   }
 
 }

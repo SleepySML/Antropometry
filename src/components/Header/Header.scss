@@ -68,6 +68,11 @@ header
           vertical-align: middle;
 
 
+          .activelogo{
+            fill: #ff6837;
+          }
+
+
 
           button{
             margin: 0;
@@ -86,6 +91,9 @@ header
 
           .header-logo-link{
             padding: 0;
+            :hover{
+              fill: #ff6837;
+            }
             svg{
               max-height: 40px;
               max-width: 58px;

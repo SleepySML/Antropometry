@@ -14,7 +14,7 @@ class HomePage extends Component {
         return (
             <main className="homepage">
                 <div className="row title">
-                    <span>Этот сайт создан для антропометрии. Здесь вы можете отселживать изменения своего тела с течением времени!</span>
+                    <span>This site was created for anthropometry. Here you can observe the changes of your body over time!</span>
                 </div>
                 <hr/>
                 <div className="row relation">
@@ -27,7 +27,7 @@ class HomePage extends Component {
 
                 </div>
                 <hr/>
-                <div className="row description-blocks">
+                <div className="row descriptions-block">
                     <DescriptionCards Description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"}
                                       Title={"Height performance"}>
                         <PerfomanceImage/>

@@ -8,8 +8,9 @@ class HomePage extends React.Component {
         return (
         <footer>
             <div className="row footer-wrapper">
-
-                <Logo/>
+                <div className="column large-1 footer_logo">
+                    <Logo/>
+                </div>
             </div>
         </footer>
         );
