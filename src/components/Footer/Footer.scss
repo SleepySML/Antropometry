@@ -1,7 +1,15 @@
-.footer{
+footer{
   background-color: #2E353D;
-  img.logo-footer{
-    height: 110px;
-    width: 110px;
+
+  .footer-wrapper{
+
+    svg{
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      max-height: 58px;
+      max-width: 58px;
+    }
   }
 }

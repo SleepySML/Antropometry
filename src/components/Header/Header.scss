@@ -19,17 +19,19 @@ header
   top:0;
   z-index: 1000;
   position: fixed;
-  min-height: 58px;
+  max-height: 58px;
+  font-family: serif;
 
 
   .navigation-wrapper{
+    width: 100%;
     padding: 0;
   }
 
   nav
   {
     box-sizing: border-box;
-    width: 62.5rem;
+    max-width: 62.5rem;
     margin-left: auto;
     margin-right: auto;
     padding-top: $nav-padding;
@@ -84,7 +86,10 @@ header
 
           .header-logo-link{
             padding: 0;
-            margin: auto;
+            svg{
+              max-height: 40px;
+              max-width: 58px;
+            }
           }
 
           a{
@@ -119,7 +124,7 @@ header
     @media screen and (max-width: 560px)
     {
       .navigation-wrapper{
-        margin-top: 13px;
+        margin-top: 0;
       }
       .header-logo-link{
         display: none;

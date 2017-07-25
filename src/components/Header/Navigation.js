@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import Logo from '../../static/images/AntLogoHeader.png';
+import Logo from '../../static/images/body-logo.svg';
 import SkyLight from 'react-skylight';
 import SignUpForm from './SignUpForm';
 import LoginForm from './LoginForm';
@@ -48,13 +48,13 @@ class Navigation extends React.Component {
 
     render() {
         return (
-            <nav>
+            <nav className="row">
                 <div className="navigation-wrapper">
                     <div className="menu-icon menu-toggle" onClick={this.onMenuIconClick}></div>
                     <ul className="menu">
                         <li className="nav-link">
                             <NavLink className="header-logo-link" activeClassName="activelogo" exact to="/">
-                                <img alt="Logo"/>
+                                <Logo/>
                             </NavLink>
                         </li>
                         <li className="nav-link"><NavLink to="/" className="menu-link" exact activeClassName="active">Home</NavLink></li>

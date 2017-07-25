@@ -72,6 +72,7 @@ module.exports = {
           /\.gif$/,
           /\.jpe?g$/,
           /\.png$/,
+          /\.svg$/,
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -95,8 +96,21 @@ module.exports = {
         },
       },
       {
-          test: /\.svg$/,
-          loader: 'react-svg-loader?es5=1'
+        test: /\.svg$/,
+        use: [
+            {
+                loader: 'babel-loader'
+            },
+            {
+                loader: 'react-svg-loader',
+                options: {
+                    svgo: {
+                        plugins: [{removeTitle: false}],
+                        floatPrecision: 2
+                    }
+                }
+            }
+        ]
       },
       {
         test: /\.(scss|css)$/,

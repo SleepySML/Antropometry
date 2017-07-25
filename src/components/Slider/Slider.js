@@ -62,7 +62,7 @@ class Slider extends React.Component{
                     <button className="orbit-next" onClick={this.onNextSlide}><span className="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
                     <button className="orbit-previous" onClick={this.onPrevSlide}><span className="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
                 </div>
-        </div>
+            </div>
         );
     }
 }

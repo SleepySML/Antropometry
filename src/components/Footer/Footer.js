@@ -1,13 +1,17 @@
 import React from 'react';
 import './Footer.scss';
-import Logo from '../../static/images/AntLogo2.png';
+
+import Logo from '../../static/images/body-logo.svg';
 
 class HomePage extends React.Component {
     render() {
         return (
-            <div className="row footer">
-                <img src={Logo} className="logo-footer" alt="Logo"/>
+        <footer>
+            <div className="row footer-wrapper">
+
+                <Logo/>
             </div>
+        </footer>
         );
     }
 }

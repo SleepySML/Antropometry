@@ -9,6 +9,23 @@ html, body{
 
   margin-top: 58px;
 
+  .relation{
+    position: relative;
+
+    .relation__ratio{
+      padding-top: 56.25%;
+      height: 0;
+    }
+    .relation__content{
+
+      background-color: red;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
 
   .title{
     color: black;
@@ -27,16 +44,30 @@ html, body{
     margin-right: auto;
 
     .column{
-      div{
+      margin: 10px 0;
 
-        svg {
-          max-height: 100px;
-          :hover{
-            fill: red;
-          }
+
+      .title-description{
+        text-align: center;
+        margin: 0 0;
+        font-size: 1.5rem;
+        font-family: 'Bellefair', sans-serif;
+        span{
+          margin: 0 auto;
         }
-
       }
+
+      .description{
+        margin: 0;
+      }
+      svg {
+        max-height: 100px;
+
+        :hover{
+          fill: red;
+        }
+      }
+
     }
   }
 

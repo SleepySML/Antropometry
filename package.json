@@ -8,10 +8,12 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-foundation": "^0.8.2",
+    "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-skylight": "^0.4.2",
     "react-svg-loader": "^1.1.1",
+    "redux": "^3.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.17.0",
     "superagent": "^3.5.2"
