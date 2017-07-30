@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.scss';
 
-import Logo from '../../static/images/body-logo.svg';
+import Logo from '../../static/images/logoAntropometry.svg';
 
 class HomePage extends React.Component {
     render() {

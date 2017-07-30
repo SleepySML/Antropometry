@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import Logo from '../../static/images/body-logo.svg';
+import Logo from '../../static/images/logoAntropometry.svg';
 import SkyLight from 'react-skylight';
 import SignUpForm from './SignUpForm';
 import LoginForm from './LoginForm';
