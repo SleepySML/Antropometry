@@ -2,37 +2,37 @@ footer{
   background-color: #2E353D;
   max-height: 80px;
   height: 80px;
+  color: white;
 
   .footer-wrapper{
     background-color: #2E353D;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
     height: 100%;
-
-    :after{
-      content: "";
-      display: table;
-      clear: both;
-    }
-    &:hover{
-      fill: #ff6837;
-    }
+    flex-direction: row;
 
 
     .footer_logo{
-      padding: 5px 0;
+      align-self: center;
       margin: 0;
-      height: 100%;
-
-      :hover{
-        fill: #ff6837;
-      }
+      margin-right: auto;
+      padding: 0;
 
       svg{
-        margin: auto;
-        max-width: 70px;
         height: 100%;
-
+        max-height: 70px;
+        width: 100%;
       }
 
     }
+    .footer-description{
+      align-self: center;
+      margin: 0;
+      padding: 0;
+      padding-right: 10px;
+
+    }
+
   }
 }

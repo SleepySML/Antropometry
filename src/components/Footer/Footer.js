@@ -8,8 +8,12 @@ class HomePage extends React.Component {
         return (
         <footer>
             <div className="row footer-wrapper">
-                <div className="column large-1 footer_logo">
+                <div className="column small-2  large-1 footer_logo">
                     <Logo/>
+
+                </div>
+                <div className="footer-description">
+                    <span>Made by Umbrella Corp.</span>
                 </div>
             </div>
         </footer>
