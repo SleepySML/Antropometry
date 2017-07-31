@@ -133,12 +133,13 @@ module.exports = {
         exclude: [
           /\.html$/,
           /\.(js|jsx)$/,
-          /\.css$/,
+          /\.(scss|css)$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
           /\.jpe?g$/,
           /\.png$/,
+          /\.svg$/,
         ],
         loader: require.resolve('file-loader'),
         options: {
@@ -162,6 +163,23 @@ module.exports = {
         loader: require.resolve('babel-loader'),
         
       },
+      {
+          test: /\.svg$/,
+          use: [
+              {
+                  loader: 'babel-loader'
+              },
+              {
+                  loader: 'react-svg-loader',
+                  options: {
+                      svgo: {
+                          plugins: [{removeTitle: false}],
+                          floatPrecision: 2
+                      }
+                  }
+              }
+          ]
+      },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
       // "css" loader resolves paths in CSS and adds assets as dependencies.
@@ -175,7 +193,7 @@ module.exports = {
       // use the "style" loader inside the async code so CSS from them won't be
       // in the main CSS file.
       {
-        test: /\.css$/,
+        test: /\.(scss|css)$/,
         loader: ExtractTextPlugin.extract(
           Object.assign(
             {
@@ -207,6 +225,7 @@ module.exports = {
                     ],
                   },
                 },
+                require.resolve('sass-loader'),
               ],
             },
             extractTextPluginOptions
